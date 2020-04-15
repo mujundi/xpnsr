@@ -24,21 +24,3 @@ const AppRouter = () => (
 );
 
 export default AppRouter;
-{
-  /* <div>
-  <p>Nisl nunc mi ipsum faucibus. Amet nulla facilisi morbi tempus. Sed arcu non odio euismod lacinia at quis. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Libero enim sed faucibus turpis in eu mi bibendum.</p>
-  <p>Amet nulla facilisi morbi tempus. Sed arcu non odio euismod lacinia at quis. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies.</p>
-  <p>Turpis egestas sed tempus urna et pharetra. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Habitant morbi tristique senectus et netus et malesuada. Tellus rutrum tellus pellentesque eu.</p>
-</div>
-
-<div>
-  <p>OUR TAX PLANNING & PREPARATION ROLES INCLUDE, BUT ARE NOT LIMITED TO:</p>
-  <ul>
-    <li>Placeholder list item</li>
-    <li>Placeholder list item</li>
-    <li>Placeholder list item</li>
-    <li>Placeholder list item</li>
-    <li>Placeholder list item</li>
-  </ul>
-</div> */
-}
