@@ -1,7 +1,9 @@
 import {
   addExpense,
   editExpense,
+  startEditExpense,
   removeExpense,
+  startRemoveExpense,
   startAddExpense,
   setExpenses,
   startSetExpenses,
@@ -32,6 +34,27 @@ test("should setup remove expense action object", () => {
   });
 });
 
+test("should setup start remove expense action object", (done) => {
+  const store = createMockStore({ expenses });
+
+  store
+    .dispatch(startRemoveExpense({ id: "1" }))
+    .then(() => {
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type: "REMOVE_EXPENSE",
+        id: "1",
+      });
+
+      return database.ref("expenses").once("value");
+    })
+    .then((snapshot) => {
+      const checkIfRemoved = snapshot.child("1").exists();
+      expect(checkIfRemoved).toBe(false);
+      done();
+    });
+});
+
 test("should setup edit expense action object", () => {
   const action = editExpense("123abc", { description: "test desc value" });
   expect(action).toEqual({
@@ -41,6 +64,31 @@ test("should setup edit expense action object", () => {
       description: "test desc value",
     },
   });
+});
+
+test("should setup start edit expense action object", (done) => {
+  const store = createMockStore({ expenses });
+  const id = expenses[0].id;
+  const updates = {
+    note: "this is an added note",
+  };
+
+  store
+    .dispatch(startEditExpense(id, updates))
+    .then(() => {
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type: "EDIT_EXPENSE",
+        id,
+        updates,
+      });
+
+      return database.ref(`expenses/${id}`).once("value");
+    })
+    .then((snapshot) => {
+      expect(snapshot.val().note).toBe("this is an added note");
+      done();
+    });
 });
 
 test("should setup add expense action object with passed values", () => {
