@@ -7,7 +7,7 @@ export const Header = ({ startLogout }) => (
   <header>
     <h1>Xpnsr</h1>
     <h2>Expense tracking made easy.</h2>
-    <NavLink to="/" activeClassName="is-active" exact={true}>
+    <NavLink to="/dashboard" activeClassName="is-active">
       Dashboard
     </NavLink>
     <NavLink to="/create" activeClassName="is-active">
