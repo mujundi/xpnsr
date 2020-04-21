@@ -1,0 +1,17 @@
+.header {
+  background: $dark-green;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: white;
+  font-size: 2rem;
+  text-decoration-color: $yellow;
+  h1 {
+    margin: 3px 0;
+  }
+}
