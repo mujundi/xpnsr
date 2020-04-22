@@ -6,7 +6,12 @@ import selectedExpenses from "../selectors/expenses";
 
 const ExpenseList = (props) => {
   return (
-    <div>
+    <div className="content-container">
+      <div>
+        <div>Expenses</div>
+        <div>Expense</div>
+        <div>Amount</div>
+      </div>
       <h1>Expense List</h1>
       {props.filters.text && <p>Filter: "{props.filters.text}"</p>}
       <ol>
