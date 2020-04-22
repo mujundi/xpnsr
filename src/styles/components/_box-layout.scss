@@ -9,14 +9,18 @@
 }
 
 .box-layout__box {
-  background: fade-out($color: white, $amount: 0.25);
+  background: fade-out($color: $dark-green, $amount: 0.25);
   border-radius: 7px;
   padding: $l-size $m-size;
   text-align: center;
   width: 25rem;
+  color: white;
 }
 
 .box-layout__title {
   margin: 0 0 $m-size 0;
-  line-height: 1;
+  color: white;
+  font-size: 4.5rem;
+  text-decoration-line: underline;
+  text-decoration-color: $yellow;
 }

@@ -19,6 +19,18 @@
   background-color: #d02626;
 }
 
+.button__guest {
+  background: $yellow;
+  border-radius: 0.2em;
+  border: none;
+  color: $dark-gray;
+  padding: 4px 9px;
+
+  &:hover {
+    background: lighten($yellow, 3%);
+  }
+}
+
 .button__google {
   box-sizing: border-box;
   position: relative;

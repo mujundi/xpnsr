@@ -10,7 +10,7 @@ const ExpenseSummary = (props) => {
   const numOfExpenses = props.selectedExpenses.length;
   return (
     <div className="page-header">
-      <div class="content-container">
+      <div className="content-container">
         {numOfExpenses === 0 && (
           <h1 className="page-header__title page-header__err">
             Looks like you've got no expenses tracked.

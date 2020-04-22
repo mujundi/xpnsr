@@ -2,11 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { startLogout } from "../actions/auth";
+import { firebase } from "../firebase/firebase";
 
 export const Header = ({ startLogout }) => (
   <header className="header">
     <div className="content-container">
-      <div class="header__content">
+      <div className="header__content">
         <Link className="header__title" to="/dashboard">
           <h1>xpnsr.</h1>
         </Link>

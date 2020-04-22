@@ -40,7 +40,22 @@ class ExpenseListFilters extends React.Component {
               }}
             />
           </div>
+
           <div className="input-group__item">
+            <DateRangePicker
+              startDate={this.props.filters.startDate}
+              startDateId={"2io2jfijefwef"}
+              endDate={this.props.filters.endDate}
+              endDateId={"wkjefnkwaefhi2u3hf"}
+              onDatesChange={this.onDatesChange}
+              focusedInput={this.state.calendarFocused}
+              onFocusChange={this.onFocusChange}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+              showClearDates={true}
+            />
+          </div>
+          <div className="input-group__item input-group__select">
             <select
               className="select"
               value={this.props.filters.sortBy}
@@ -56,20 +71,6 @@ class ExpenseListFilters extends React.Component {
               <option value="date">Date</option>
               <option value="amount">Amount</option>
             </select>
-          </div>
-          <div className="input-group__item">
-            <DateRangePicker
-              startDate={this.props.filters.startDate}
-              startDateId={"2io2jfijefwef"}
-              endDate={this.props.filters.endDate}
-              endDateId={"wkjefnkwaefhi2u3hf"}
-              onDatesChange={this.onDatesChange}
-              focusedInput={this.state.calendarFocused}
-              onFocusChange={this.onFocusChange}
-              numberOfMonths={1}
-              isOutsideRange={() => false}
-              showClearDates={true}
-            />
           </div>
         </div>
       </div>
